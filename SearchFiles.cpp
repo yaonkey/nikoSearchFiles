@@ -3,16 +3,16 @@
 void FindFile(const std::wstring&);
 
 /// <summary>
-/// Конструктор класса SearchFile
+/// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ SearchFile
 /// </summary>
-/// <param name="diskName">Обозначение диска для работы с ним (например, С)</param>
+/// <param name="diskName">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ)</param>
 SearchFiles::SearchFiles(std::wstring diskname) {
 	diskName = diskname;
 	chooseSearchType();
 }
 
 /// <summary>
-/// Диструктор класса SearchFile
+/// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ SearchFile
 /// </summary>
 SearchFiles::~SearchFiles() {
 	//delete this;
@@ -20,7 +20,7 @@ SearchFiles::~SearchFiles() {
 
 
 /// <summary>
-/// Метод для выбора типа поиска
+/// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 /// </summary>
 void SearchFiles::chooseSearchType() {
 	do {
@@ -36,20 +36,20 @@ void SearchFiles::chooseSearchType() {
 
 	switch (searchType)
 	{
-	case 1: // Вызов метода поиска по шаблону
+	case 1: // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		searchByTemplate();
 		break;
-	case 2: // Вызов метода поиска по дате создания
+	case 2: // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		searchByCreating();
 		break;
-	case 3: // Вызов метода поиска по размеру файла
+	case 3: // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 		searchBySize();
 		break;
 	}
 }
 
 /// <summary>
-/// Метод для поиска по шаблону
+/// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 /// </summary>
 void SearchFiles::searchByTemplate() {
 	std::wstring wregexpr;
@@ -60,12 +60,11 @@ void SearchFiles::searchByTemplate() {
 	} while (wregexpr == L"");
 
 
-	//browseFiles(wregexpr, true);
-	FindFile(wregexpr);
+	browseFiles(wregexpr, true);
 }
 
 /// <summary>
-/// Метод для поиска по времени создания файла
+/// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 /// </summary>
 void SearchFiles::searchByCreating() {
 	std::wstring time;
@@ -78,7 +77,7 @@ void SearchFiles::searchByCreating() {
 }
 
 /// <summary>
-/// Метод для поиска по размеру файла
+/// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 /// </summary>
 void SearchFiles::searchBySize() {
 	int size = 0;
@@ -91,64 +90,11 @@ void SearchFiles::searchBySize() {
 }
 
 /// <summary>
-/// Поиск файла по шаблону
+/// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 /// </summary>
-/// <param name="re">Регулярное выражение</param>
-/// <param name="isTrue">Костыль для перегрузки</param>
+/// <param name="re">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</param>
+/// <param name="isTrue">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</param>
 void SearchFiles::browseFiles(std::wstring re, bool isTrue) {
-	std::wstring tmp = diskName + L"\\" + re;
-	std::wcout << "Search: " << tmp << std::endl;
-
-	WIN32_FIND_DATAW file;	
-	HANDLE search_handle = FindFirstFileW(tmp.c_str(), &file);
-	SYSTEMTIME time;
-
-	if (search_handle != INVALID_HANDLE_VALUE) {
-		do
-		{
-			if (file.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
-			{
-				std::wcout << file.dwFileAttributes << std::endl;
-				if ((!lstrcmpW(file.cFileName, L".")) || (!lstrcmpW(file.cFileName, L"..")))
-					continue;
-			}
-			tmp = diskName + L"\\" + std::wstring(file.cFileName);
-			std::wcout << tmp << std::endl;
-			FileTimeToSystemTime(&file.ftCreationTime, &time);
-			SearchFiles::fileInfo info;
-			setFileInfo(info, file, time);
-			filesInfo.push_back(info);
-		} while (FindNextFileW(search_handle, &file));
-	}
-	else {
-		std::cout << "FAILED!" << std::endl;
-		FindFile(re);
-	}
-}
-
-
-/// <summary>
-/// Поиск файлов по размеру
-/// </summary>
-/// <param name="filesize">Размер файла</param>
-void SearchFiles::browseFiles(int filesize) {
-
-}
-
-/// <summary>
-/// Поиск файлов по времени создания
-/// </summary>
-/// <param name="timestamp">Время создания</param>
-void SearchFiles::browseFiles(std::wstring timestamp) {
-
-}
-
-/// <summary>
-/// Поиск файла по шаблону
-/// </summary>
-/// <param name="regexp">Регулярное выражение (шаблон)</param>
-void SearchFiles::FindFile(std::wstring regexp)
-{
 	std::wstring directory = diskName;
 	std::wstring tmp = directory + L"\\" + regexp;
 
@@ -177,6 +123,23 @@ void SearchFiles::FindFile(std::wstring regexp)
 		for (std::vector<std::wstring>::iterator iter = directories.begin(), end = directories.end(); iter != end; ++iter)
 			FindFile(*iter);
 	}
+}
+
+
+/// <summary>
+/// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+/// </summary>
+/// <param name="filesize">пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ</param>
+void SearchFiles::browseFiles(int filesize) {
+
+}
+
+/// <summary>
+/// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+/// </summary>
+/// <param name="timestamp">пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</param>
+void SearchFiles::browseFiles(std::wstring timestamp) {
+
 }
 
 void SearchFiles::setFileInfo(fileInfo& info, WIN32_FIND_DATAW file, SYSTEMTIME time) {

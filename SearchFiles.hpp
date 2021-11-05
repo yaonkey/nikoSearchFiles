@@ -22,20 +22,20 @@ class SearchFiles {
 	std::vector<fileInfo>filesInfo;
 	std::wstring diskName;
 public:
-	SearchFiles(std::wstring); // Конструктор
-	~SearchFiles();    // Деструктор
+	SearchFiles(std::wstring); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	~SearchFiles();    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 private:
-	int searchType;   // Тип поиска
+	int searchType;   // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 
-	void chooseSearchType(); // Метод для выбора типа поиска
-	void searchByTemplate(); // Метод для поиска по шаблону
-	void searchByCreating(); // Метод для поиска по времени создания файла
-	void searchBySize();     // Метод для поиска по размеру файла
+	void chooseSearchType(); // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	void searchByTemplate(); // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	void searchByCreating(); // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	void searchBySize();     // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 
-	void browseFiles(int);               // Поиск файлов по размеру
-	void browseFiles(std::wstring, bool); // Поиск файлов по регулярному выражению (шаблону)
-	void browseFiles(std::wstring);       // Поиск файлов по времени создания (UTC+3)
-	void FindFile(std::wstring);         // Рекурсивный поиск файлов
+	void browseFiles(int);               // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	void browseFiles(std::wstring, bool); // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
+	void browseFiles(std::wstring);       // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (UTC+3)
+	void FindFile(std::wstring);         // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 
 	void setFileInfo(fileInfo&, WIN32_FIND_DATAW, SYSTEMTIME); // 
 };
